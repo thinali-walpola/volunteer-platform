@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Volunteer Opportunities | VolunteerMatch</title>
+
+    <link
+        rel="stylesheet"
+        href="style/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            🤝 VolunteerMatch
+        </div>
+
+
+        <nav>
+
+            <a href="index.html#dashboard">
+                Dashboard
+            </a>
+
+            <a href="opportunity.html">
+                Opportunities
+            </a>
+
+            <a href="index.html#profile">
+                My Profile
+            </a>
+
+        </nav>
+
+
+        <button
+            class="profile-btn"
+            onclick="window.location.href='index.html#profile'"
+        >
+            👤 My Profile
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= OPPORTUNITIES ================= -->
+
+    <main>
+
+        <section
+            id="opportunities"
+            class="opportunities-section"
+        >
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <p class="small-title">
+                        FIND YOUR NEXT OPPORTUNITY
+                    </p>
+
+                    <h2>
+                        All Volunteer Opportunities
+                    </h2>
+
+                </div>
+
+
+
+                <!-- FILTERS -->
+
+                <div class="filters">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Search jobs..."
+                        oninput="displayOpportunities()"
+                    >
+
+
+                    <select
+                        id="categoryFilter"
+                        onchange="displayOpportunities()"
+                    >
+
+                        <option value="all">
+                            All Jobs
+                        </option>
+
+                        <option value="Education">
+                            Education
+                        </option>
+
+                        <option value="Environment">
+                            Environment
+                        </option>
+
+                        <option value="Healthcare">
+                            Healthcare
+                        </option>
+
+                        <option value="Technology">
+                            Technology
+                        </option>
+
+                        <option value="Community">
+                            Community
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ALL OPPORTUNITIES -->
+
+            <div
+                id="opportunityContainer"
+                class="opportunity-grid"
+            ></div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div
+        id="modal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-btn"
+                onclick="closeModal()"
+            >
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            🤝 VolunteerMatch
+        </div>
+
+        <p>
+            Connecting people with opportunities to make a difference.
+        </p>
+
+        <p class="copyright">
+            © 2026 VolunteerMatch
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="javascript/opportunity_script.js"></script>
+
+</body>
+
+</html>
+
+
